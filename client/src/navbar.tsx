@@ -8,7 +8,10 @@ const Navbar = () => {
     const [showServicesDropdown, setShowServicesDropdown] = useState(false);
 
     const services = [
-        { name: 'Template Service', path: '/services/template-service' },
+        { name: 'Individual Therapy', path: '/services/individual-therapy' },
+        { name: 'Couples Counseling', path: '/services/couples-counseling' },
+        { name: 'Adolescent Mental Health', path: '/services/adolescent-mental-health' },
+        { name: 'Telehealth Services', path: '/services/telehealth-services' },
     ];
 
     const conditions = [
