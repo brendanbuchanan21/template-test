@@ -12,6 +12,22 @@ import BipolarDisorder from './conditions/BipolarDisorder'
 import SubstanceUse from './conditions/SubstanceUse'
 import OCD from './conditions/OCD'
 import Grief from './conditions/Grief'
+import DissociativeDisorders from './conditions/DissociativeDisorders'
+import ChildhoodTrauma from './conditions/ChildhoodTrauma'
+import SexualAbuse from './conditions/SexualAbuse'
+import LowSelfEsteem from './conditions/LowSelfEsteem'
+import LifeTransitions from './conditions/LifeTransitions'
+import AdjustmentDisorders from './conditions/AdjustmentDisorders'
+import AngerManagement from './conditions/AngerManagement'
+import StressManagement from './conditions/StressManagement'
+import BodyDysmorphic from './conditions/BodyDysmorphic'
+import OppositionalDefiant from './conditions/OppositionalDefiant'
+import SeparationAnxiety from './conditions/SeparationAnxiety'
+import AttachmentIssues from './conditions/AttachmentIssues'
+import Agoraphobia from './conditions/Agoraphobia'
+import WomensMentalHealth from './conditions/WomensMentalHealth'
+import LGBTQIAMentalHealth from './conditions/LGBTQIAMentalHealth'
+import Schizophrenia from './conditions/Schizophrenia'
 import TemplateService from './services/template-service/template-service'
 import IndividualTherapy from './services/individual-therapy/individual-therapy'
 import CouplesCounseling from './services/couples-counseling/couples-counseling'
@@ -44,6 +60,22 @@ function App() {
         <Route path="/conditions/substance-use" element={<SubstanceUse />} />
         <Route path="/conditions/ocd" element={<OCD />} />
         <Route path="/conditions/grief" element={<Grief />} />
+        <Route path="/conditions/dissociative-disorders" element={<DissociativeDisorders />} />
+        <Route path="/conditions/childhood-trauma" element={<ChildhoodTrauma />} />
+        <Route path="/conditions/sexual-abuse" element={<SexualAbuse />} />
+        <Route path="/conditions/low-self-esteem" element={<LowSelfEsteem />} />
+        <Route path="/conditions/life-transitions" element={<LifeTransitions />} />
+        <Route path="/conditions/adjustment-disorders" element={<AdjustmentDisorders />} />
+        <Route path="/conditions/anger-management" element={<AngerManagement />} />
+        <Route path="/conditions/stress-management" element={<StressManagement />} />
+        <Route path="/conditions/body-dysmorphic" element={<BodyDysmorphic />} />
+        <Route path="/conditions/oppositional-defiant" element={<OppositionalDefiant />} />
+        <Route path="/conditions/separation-anxiety" element={<SeparationAnxiety />} />
+        <Route path="/conditions/attachment-issues" element={<AttachmentIssues />} />
+        <Route path="/conditions/agoraphobia" element={<Agoraphobia />} />
+        <Route path="/conditions/womens-mental-health" element={<WomensMentalHealth />} />
+        <Route path="/conditions/lgbtqia-mental-health" element={<LGBTQIAMentalHealth />} />
+        <Route path="/conditions/schizophrenia" element={<Schizophrenia />} />
       </Routes>
     </>
   )
