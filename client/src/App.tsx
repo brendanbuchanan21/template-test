@@ -33,6 +33,11 @@ import IndividualTherapy from './services/individual-therapy/individual-therapy'
 import CouplesCounseling from './services/couples-counseling/couples-counseling'
 import AdolescentMentalHealth from './services/adolescent-mental-health/adolescent-mental-health'
 import TelehealthServices from './services/telehealth-services/telehealth-services'
+import Emdr from './treatments/emdr/emdr'
+import Brainspotting from './treatments/brainspotting/brainspotting'
+import Cbt from './treatments/cbt/cbt'
+import Dbt from './treatments/dbt/dbt'
+import Act from './treatments/act/act'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -49,6 +54,11 @@ function App() {
         <Route path="/services/couples-counseling" element={<CouplesCounseling />} />
         <Route path="/services/adolescent-mental-health" element={<AdolescentMentalHealth />} />
         <Route path="/services/telehealth-services" element={<TelehealthServices />} />
+        <Route path="/treatments/act" element={<Act />} />
+        <Route path="/treatments/emdr" element={<Emdr />} />
+        <Route path="/treatments/brainspotting" element={<Brainspotting />} />
+        <Route path="/treatments/cbt" element={<Cbt />} />
+        <Route path="/treatments/dbt" element={<Dbt />} />
         <Route path="/conditions/sleep" element={<Sleep />} />
         <Route path="/conditions/depression" element={<Depression />} />
         <Route path="/conditions/anxiety" element={<Anxiety />} />

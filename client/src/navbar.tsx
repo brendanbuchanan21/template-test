@@ -6,12 +6,21 @@ import { ChevronDown } from 'lucide-react';
 const Navbar = () => {
     const [showConditionsDropdown, setShowConditionsDropdown] = useState(false);
     const [showServicesDropdown, setShowServicesDropdown] = useState(false);
+    const [showTreatmentsDropdown, setShowTreatmentsDropdown] = useState(false);
 
     const services = [
         { name: 'Individual Therapy', path: '/services/individual-therapy' },
         { name: 'Couples Counseling', path: '/services/couples-counseling' },
         { name: 'Adolescent Mental Health', path: '/services/adolescent-mental-health' },
         { name: 'Telehealth Services', path: '/services/telehealth-services' },
+    ];
+
+    const treatments = [
+        { name: 'Acceptance & Commitment Therapy (ACT)', path: '/treatments/act' },
+        { name: 'Brainspotting Therapy', path: '/treatments/brainspotting' },
+        { name: 'Cognitive Behavioral Therapy (CBT)', path: '/treatments/cbt' },
+        { name: 'Dialectical Behavior Therapy (DBT)', path: '/treatments/dbt' },
+        { name: 'EMDR Therapy', path: '/treatments/emdr' },
     ];
 
     const conditions = [
@@ -118,9 +127,32 @@ const Navbar = () => {
                     <p>Situational Issues</p>
                     <ChevronDown />
                 </div>
-                <div className='flex justify-center items-center'>
-                    <p>Treatments</p>
-                    <ChevronDown />
+
+                <div
+                    className="relative"
+                    onMouseEnter={() => setShowTreatmentsDropdown(true)}
+                    onMouseLeave={() => setShowTreatmentsDropdown(false)}
+                >
+                    <div className='flex justify-center items-center cursor-pointer'>
+                        <p>Treatments</p>
+                        <ChevronDown />
+                    </div>
+
+                    {showTreatmentsDropdown && (
+                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 pt-2 z-50">
+                            <div className="bg-white border border-gray-200 rounded-lg shadow-2xl min-w-[320px] p-4">
+                                {treatments.map((treatment) => (
+                                    <Link
+                                        key={treatment.path}
+                                        to={treatment.path}
+                                        className="block px-4 py-3 hover:bg-[#FBF9EB] rounded-md text-left transition-colors duration-150"
+                                    >
+                                        {treatment.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
